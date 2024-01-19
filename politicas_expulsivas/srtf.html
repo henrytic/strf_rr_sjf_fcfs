@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Planificador de Procesos SRTF</title>
+
+    <link rel="stylesheet" href="srtf.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+<body>
+    <h1>Planificador SRTF</h1>
+    <form id="formProceso">
+        <input type="text" id="proceso" placeholder="Nombre del Proceso" required>
+        <input type="number" id="tiempoLlegada" placeholder="Tiempo de Llegada" required>
+        <input type="number" id="duracion" placeholder="Duración" required>
+        <button type="submit">Agregar Proceso</button>
+    </form>
+
+
+    <button onclick="calcularResultados()">Calcular</button>
+    <table id="tablaResultados">
+        <thead>
+            <tr>
+                <th>Proceso</th>
+                <th>Tiempo de Retorno</th>
+                <th>Tiempo de Espera</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <div id="chart_div"></div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script src="srtf.js"></script>
+</body>
+</html>

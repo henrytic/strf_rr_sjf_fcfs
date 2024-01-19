@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Round Robin con Diagrama de Gantt</title>
+    <link rel="stylesheet" href="rr.css">
+    <script src="https://code.highcharts.com/gantt/highcharts-gantt.js"></script>
+</head>
+<body>
+    <h1>Planificador Round Robin con Diagrama de Gantt</h1>
+    <form id="processForm">
+        <input type="text" id="processName" placeholder="Nombre del Proceso" required>
+        <input type="number" id="arrivalTime" placeholder="Tiempo de Llegada" required>
+        <input type="number" id="executionTime" placeholder="Tiempo de Ejecución" required>
+        <button type="submit">Agregar Proceso</button>
+    </form>
+
+    <form id="quantumForm">
+        <input type="number" id="quantum" placeholder="Quantum" required>
+        <button type="submit">Iniciar Planificación</button>
+    </form>
+
+    <div id="ganttChartContainer"></div>
+
+<div id="resultsTableContainer">
+    <h2>Resultados de la Planificación</h2>
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>Proceso</th>
+                <th>Tiempo de Retorno</th>
+                <th>Tiempo de Espera</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+
+
+    <script src="rr.js"></script>
+</body>
+</html>

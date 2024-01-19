@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Tiempos de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container my-4">
+        <h1 class="text-center mb-4">Calculadora de Tiempos de Tareas</h1>
+
+        <div class="input-group mb-3">
+            <input type="text" id="taskName" class="form-control" placeholder="Nombre de la tarea">
+            <input type="number" id="taskDuration" class="form-control" placeholder="Duración (en unidades)">
+            <input type="number" id="taskArrival" class="form-control" placeholder="Tiempo de Llegada">
+            
+            <div id="rrSettings" style="display: none;">
+                <input type="number" id="quantum" placeholder="Quantum (en unidades)">
+            </div>
+            
+            
+            
+            <button class="btn btn-outline-secondary" type="button" onclick="addTask()">Añadir Tarea</button>
+        </div>
+
+        <div id="taskList" class="mb-3"></div>
+
+        <div class="d-flex justify-content-around mb-3">
+            <button class="btn btn-primary" onclick="setAlgorithm('FCFS')">FCFS</button>
+            <button class="btn btn-secondary" onclick="setAlgorithm('SPN')">SJF</button>
+            
+
+        </div>
+
+        <h2 class="mb-3">Resultados:</h2>
+        <table id="results" class="table">
+            <thead>
+                <tr>
+                    <th>Tarea</th>
+                    <th>Tiempo de Espera</th>
+                    <th>Tiempo de Retorno</th>
+                    <th>Tiempo de Llegada</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <div id="gantt_chart" style="width: 100%; height: 500px;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
